@@ -4,10 +4,11 @@ export function App({ number, setNumber }) {
   return (
     <div>
       <form>
-        <input type="number"
+        <input ref="inputNumber"
+               type="number"
                value={number}
                onChange={e => setNumber(e.target.value)} />
-        <button onClick={e => {
+        <button ref="buttonReset" onClick={e => {
           e.preventDefault();
           setNumber('');
         }}>
