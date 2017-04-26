@@ -1,7 +1,8 @@
 import { compose, withState } from 'recompose';
 
-import { App } from './App';
+import {InputTypeNumber} from './InputTypeNumber';
+
 
 export default compose(
   withState('number', 'setNumber', ''),
-)(App);
+)(InputTypeNumber);

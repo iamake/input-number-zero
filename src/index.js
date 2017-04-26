@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppContainer from './containers/App/AppContainer';
+import App from './containers/App/App';
 
 
 const MOUNT_NODE = document.getElementById('root');
 
 function render() {
   ReactDOM.render(
-    <AppContainer />,
+    <App />,
     MOUNT_NODE,
   );
 }

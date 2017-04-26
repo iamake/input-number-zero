@@ -7,12 +7,13 @@ import {
   Simulate,
 } from 'react-dom/test-utils';
 
-import AppContainer from '../../src/containers/App/AppContainer'
+import InputTypeNumberContainer from '../../src/containers/InputTypeNumber/InputTypeNumberContainer';
 
-describe('application logic', () => {
+
+describe('InputTypeNumber', () => {
   it('should correctly reset if was previously set to 1', () => {
     const app = renderIntoDocument(
-      <AppContainer />
+      <InputTypeNumberContainer />
     );
     const inputNumber = ReactDOM.findDOMNode(app.refs.inputNumber);
     const buttonReset = ReactDOM.findDOMNode(app.refs.buttonReset);
@@ -27,7 +28,7 @@ describe('application logic', () => {
 
   it('should correctly reset if was previously set to 0', () => {
     const app = renderIntoDocument(
-      <AppContainer />
+      <InputTypeNumberContainer />
     );
     const inputNumber = ReactDOM.findDOMNode(app.refs.inputNumber);
     const buttonReset = ReactDOM.findDOMNode(app.refs.buttonReset);

@@ -1,24 +1,15 @@
 import React from 'react';
+import InputTypeNumberContainer from './../InputTypeNumber/InputTypeNumberContainer';
+import InputTypeTextContainer from './../InputTypeText/InputTypeTextContainer';
 
-export function App({ number, setNumber }) {
+function App() {
   return (
     <div>
-      <form>
-        <input ref="inputNumber"
-               type="number"
-               value={number}
-               onChange={e => setNumber(e.target.value)} />
-        <button ref="buttonReset" onClick={e => {
-          e.preventDefault();
-          setNumber('');
-        }}>
-          RESET
-        </button>
-      </form>
-      <ol>
-        <li>Enter non zero and hit RESET</li>
-        <li>Enter zero and hit RESET</li>
-      </ol>
+      <InputTypeNumberContainer />
+      <hr />
+      <InputTypeTextContainer />
     </div>
   )
 }
+
+export default App;
